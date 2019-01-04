@@ -1,0 +1,9 @@
+#AuthType Basic
+#AuthName "Who arre you?"
+#AuthBasicProvider file
+#AuthUserFile /var/www/html/worker/pass
+#Require user furucrm
+
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^public
+RewriteRule ^(.*)$ public/$1 [L]
