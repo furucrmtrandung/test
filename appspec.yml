@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/html/worker
+    destination: /home/ec2-user/raw
 hooks:
   BeforeInstall:
     - location: scripts-deploy/before-install.sh
