@@ -6,10 +6,10 @@ files:
 hooks:
   BeforeInstall:
     - location: scripts-deploy/before-install.sh
-  AfterInstall:
-    - location: scripts-deploy/npm-install.sh
-      runas: ec2-user
-      timeout: 300
+  #AfterInstall:
+  #  - location: scripts-deploy/npm-install.sh
+  #    runas: ec2-user
+  #    timeout: 300
   #ApplicationStart:
   #  - location: scripts/npm-start.sh
   #    runas: root
