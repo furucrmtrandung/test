@@ -2,4 +2,15 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/html/
+    destination: /home/ec2-user
+hooks:
+  BeforeInstall:
+    - location: before-install.sh
+  AfterInstall:
+    - location: npm-install.sh
+      runas: ec2-user
+      timeout: 300
+  #ApplicationStart:
+  #  - location: scripts/npm-start.sh
+  #    runas: root
+  #    timeout: 60
